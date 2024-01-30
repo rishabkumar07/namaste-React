@@ -4,6 +4,8 @@
   "description": "This is namaste React practice session",
   "main": "App.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "author": "Rishab Gupta",
