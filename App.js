@@ -1,32 +1,90 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-//const heading = React.createElement("h1", { id:"heading" }, "Namaste React Using JSX🚀");
+/*Low Level Planning
 
-// Jsx => React.createElement() => Js Object => HTML Element
+1) Header
+    - Logo
+    - Nav Items(Home, About Us, Cart)
 
-const jsxHeading = <h1 id="heading" className="header"> Namaste React Using JSX 🚀</h1>;
+2) Body
+    - Search
+    - RestaurantContainer
+        - Image
+        - Name Of Rest, Rating, Cuisine, ETA(delivery time)
 
-// Functional Components are Js functions, which returns React Element
-const Title = () => (
-    <h1 id="title" className="header"> 
-        Namaste React Using Functional Component🚀
-    </h1>
-);
+3) Footer
+    - Copyright
+    - Links
+    - Address
+    - Contact Info
+*/
 
-const number = 1000;
 
-const ReactHeading = () => (
-    <div id="container">
-        <Title />
-        <h2 className="heading">
-            Component Composition😁
-        </h2>
-        <h3>{number}</h3>
-        <h4>{50 * 50}</h4>
-    </div>
-)
+const Heading = () => {
+    return (
+        <div className = "header">
+            <div className="logoContainer">
+                <img src="https://cdn5.f-cdn.com/contestentries/1076909/19407170/596cbf037df9a_thumb900.jpg"></img>
+            </div>
+            <div className="navItemsContainer">
+                <ul className="nav-items">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
+        </div>  
+    );
+}
+
+const styleColors = {
+    backgroundColor: "#f0f0f0"
+}
+const RestaurantCard = () => {
+    return (
+        <div className="res-card" style ={styleColors}>
+            <div className="res-logo">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/85825a6d74b1059a63a9b688de9f67ce" 
+                  alt="res-logo" />
+            </div>
+            <div className="res-details">
+                <h4>NIC Ice Creams</h4>
+                <p>Ice Creams, Desserts</p>
+                <p>4.7 stars</p>
+                <p>25-30 mins</p>
+            </div>
+
+        </div>
+    );
+};
+
+const Body = () => {
+    return (
+        <div className="body">
+            <div className="search">Search</div>
+            <div className="resContainer">
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+                <RestaurantCard />
+            </div>
+        </div>
+    );
+}
+
+const Applayout = () => {
+    return (
+        <div className ="foodApp" >
+            <Heading />
+            <Body />
+        </div>
+    );
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<ReactHeading />);
+root.render(<Applayout />);

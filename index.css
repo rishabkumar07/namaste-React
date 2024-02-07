@@ -1,3 +1,68 @@
-#heading {
-    color: red;
+.foodApp {
+    .header {
+        display: flex;
+        border: 1px solid black;
+        justify-content: space-between;
+        .logoContainer {
+            img {
+                width: 200px;
+            }
+        }
+        .navItemsContainer {
+            margin: 0 30px;
+
+            .nav-items {
+                display: flex;
+                margin-top: 30px;
+
+                li {
+                    margin:10px;
+                    padding: 10px;
+                    list-style: none;
+                    font-size: 20px;
+                }
+            }
+            
+        }
+    }
+
+    .body {
+        .search {
+            margin: 10px;
+        }
+        .resContainer {
+            display: flex;
+            flex-wrap: wrap;
+            .res-card {
+                margin: 10px;
+                width: 250px;
+                height: 280px;
+                .res-logo {
+                    padding: 0 25px;
+
+                    img {
+                        width: 200px;
+                        height: 150px;
+                    }
+                }
+
+                .res-details {
+                    padding: 0 50px;
+                    h4 {
+                        margin: 10px 0;
+                    }
+                    p {
+                        margin: 10px 0;
+                    }
+                }
+            }
+
+            .res-card:hover {
+                border: 1px solid black;
+                cursor: pointer
+            }
+
+
+        }
+    }
 }
