@@ -35,13 +35,12 @@
             flex-wrap: wrap;
             .res-card {
                 margin: 10px;
-                width: 250px;
-                height: 280px;
+                width: 220px;
+                /* height: 280px; */
                 .res-logo {
-                    padding: 0 25px;
-
                     img {
-                        width: 200px;
+                        width: 90%;
+                        padding:5%;
                         height: 150px;
                     }
                 }
