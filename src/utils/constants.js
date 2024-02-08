@@ -1,0 +1,2 @@
+export const LOGO_IMG = "https://cdn5.f-cdn.com/contestentries/1076909/19407170/596cbf037df9a_thumb900.jpg";
+export const CDN_LINK = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";

@@ -19,3 +19,25 @@ Learning React and doing some cool projects
 - Diagnostics - Good Error Handling
 
 
+/*Low Level Planning
+
+1) Header
+    - Logo
+    - Nav Items(Home, About Us, Cart)
+
+2) Body
+    - Search
+    - RestaurantContainer
+        - Image
+        - Name Of Rest, Rating, Cuisine, ETA(delivery time)
+
+3) Footer
+    - Copyright
+    - Links
+    - Address
+    - Contact Info
+*/
+
+Two types of import & export -
+1) Default import/export
+2) Named import/export
