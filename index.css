@@ -27,8 +27,11 @@
     }
 
     .body {
-        .search {
-            margin: 10px;
+        .filter {
+            .filter-btn {
+                margin: 10px;
+                cursor: pointer;
+            }  
         }
         .resContainer {
             display: flex;

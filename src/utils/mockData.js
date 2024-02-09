@@ -12,8 +12,7 @@ const restList = [
             "American",
             "Salads",
             "Continental",
-            "Keto",
-            "Healthy Food"
+            "Keto"
         ],
         "avgRating": 4.5,
         "parentId": "1252",
@@ -293,9 +292,7 @@ const restList = [
     "Continental",
     "Desserts",
     "Bakery",
-    "Beverages",
-    "Pastas",
-    "Italian"
+    "Beverages"
     ],
     "avgRating": 4.4,
     "parentId": "218065",
@@ -416,12 +413,7 @@ const restList = [
     "Biryani",
     "Grill",
     "Kebabs",
-    "Arabian",
-    "Lebanese",
-    "Beverages",
-    "Desserts",
-    "Italian",
-    "Turkish"
+    "Arabian"
     ],
     "avgRating": 4.4,
     "parentId": "3518",
@@ -1007,10 +999,7 @@ const restList = [
     "Kebabs",
     "South Indian",
     "Tandoor",
-    "Beverages",
-    "North Indian",
-    "Ice Cream",
-    "Desserts"
+    "Beverages"
     ],
     "avgRating": 4,
     "parentId": "5610",
@@ -1175,10 +1164,7 @@ const restList = [
     "North Indian",
     "Kebabs",
     "Mughlai",
-    "Lucknowi",
-    "Hyderabadi",
-    "Desserts",
-    "Beverages"
+    "Lucknowi"
     ],
     "avgRating": 4.1,
     "parentId": "1803",
@@ -1319,13 +1305,10 @@ const restList = [
     "costForTwo": "₹250 for two",
     "cuisines": [
     "Continental",
-    "Chinese",
-    "Oriental",
     "Asian",
     "Healthy Food",
     "Fast Food",
-    "Indian",
-    "Desserts"
+    "Indian"
     ],
     "avgRating": 4.1,
     "parentId": "398",
@@ -1403,29 +1386,11 @@ const restList = [
     "areaName": "Marathahalli",
     "costForTwo": "₹300 for two",
     "cuisines": [
-    "Pan-Asian",
-    "Continental",
     "North Indian",
-    "Desserts",
-    "American",
-    "Asian",
-    "Beverages",
-    "Biryani",
-    "Chinese",
-    "European",
-    "Grill",
-    "Hyderabadi",
     "Indian",
-    "Italian",
-    "Kebabs",
     "Lucknowi",
-    "Mediterranean",
-    "Mexican",
-    "Mughlai",
-    "Oriental",
     "Pastas",
-    "Punjabi",
-    "Raja"
+    "Punjabi"
     ],
     "avgRating": 4.4,
     "parentId": "4317",
