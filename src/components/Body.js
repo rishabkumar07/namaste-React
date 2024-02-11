@@ -16,8 +16,9 @@ const Body = () => {
         setRestaurantList(jsonData.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
     }
 
-    console.log("Body component renders begins");
-
+    if(restaurantList.length === 0) {
+        return <h1>Loading...</h1>;
+    }
     
     
     return (
@@ -25,7 +26,6 @@ const Body = () => {
             <div className="filter">
                 <button className="filter-btn" onClick={() => {
                     const filteredRestList = restaurantList.filter((restaurant) => {
-                        console.log("state changes");
                        return restaurant.info.avgRating > 4.3;
                     });
                     setRestaurantList(filteredRestList);
