@@ -20,6 +20,13 @@
                     padding: 10px;
                     list-style: none;
                     font-size: 20px;
+
+                }
+                .login-btn {
+                    cursor: pointer;
+                    margin: 10px 8px;
+                    width: 52px;
+                    font-size: 0.75rem;
                 }
             }
             
