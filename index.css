@@ -35,10 +35,19 @@
 
     .body {
         .filter {
+            display: flex;
+
             .filter-btn {
                 margin: 10px;
                 cursor: pointer;
-            }  
+            }
+            .search-container {
+                margin: 10px;
+
+                .search {
+                    margin-left: 5px;
+                }
+            } 
         }
         .resContainer {
             display: flex;
