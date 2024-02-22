@@ -52,9 +52,11 @@
         .resContainer {
             display: flex;
             flex-wrap: wrap;
+            
             .res-card {
                 margin: 10px;
-                width: 220px;
+                width: 200px;
+                height: 97%;
                 /* height: 280px; */
                 .res-logo {
                     img {
@@ -65,7 +67,7 @@
                 }
 
                 .res-details {
-                    padding: 0 50px;
+                    padding: 0 20px;
                     h4 {
                         margin: 10px 0;
                     }
@@ -74,13 +76,12 @@
                     }
                 }
             }
-
+    
             .res-card:hover {
                 border: 1px solid black;
                 cursor: pointer
             }
-
-
+            
         }
     }
 
