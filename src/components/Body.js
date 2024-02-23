@@ -8,7 +8,7 @@ const Body = () => {
     const [restaurantList, setRestaurantList] = useState([]);
     const[searchText, setSearchText] = useState('');
     const [restListData, setRestListData] = useState([]); //copy of restaurantList
-    
+     
     useEffect(()=> {
         // console.log("Use Effect is called");
         fetchData();
