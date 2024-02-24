@@ -1,34 +1,15 @@
 import RestaurantCard from "./RestaurantCard";
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import Shimmer from "./Shimmer";
-import {CORS_LINK, REST_LINK} from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import useBody from "../utils/useBody";
 
 const Body = () => {
-    const [restaurantList, setRestaurantList] = useState([]);
-    const[searchText, setSearchText] = useState('');
-    const [restListData, setRestListData] = useState([]); //copy of restaurantList
-    
+    const [searchText, setSearchText] = useState('');
     const onlineStatus = useOnlineStatus();
+		const { restaurantList, restListData } = useBody();
      
-    useEffect(()=> {
-        // console.log("Use Effect is called");
-        fetchData();
-    }, []);
-
-    const fetchData = async () => {
-        const url = CORS_LINK + encodeURIComponent(REST_LINK);
-        const data = await fetch(url);
-
-        const jsonData = await data.json();
-        
-        //Whenever state variable changes, react triggers reconciliation cycle(re-renders the component)
-
-        setRestListData(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setRestaurantList(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        //console.log("Will it come here before re-rendering");
-    }
     //conditional rendering
 
     if(!onlineStatus) {
