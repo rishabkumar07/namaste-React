@@ -8,7 +8,7 @@ import useBody from "../utils/useBody";
 const Body = () => {
     const [searchText, setSearchText] = useState('');
     const onlineStatus = useOnlineStatus();
-		const { restaurantList, restListData } = useBody();
+		const { restaurantList, restListData, setRestaurantList } = useBody();
      
     //conditional rendering
 
