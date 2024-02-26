@@ -15,7 +15,7 @@ const RestaurantCard = (props) => {
                   className="w-60 h-40 object-cover" />
             </div>
             <div className="res-details px-4 py-2">
-                <h4>{name}</h4>
+                <h4 className="font-medium">{name}</h4>
                 <p>{cuisines.join(", ")}</p>
                 <p>{avgRating} stars</p>
                 <p>{costForTwo}</p>
