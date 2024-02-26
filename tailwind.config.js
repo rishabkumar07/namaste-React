@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{html,js}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'search-box': 'rgba(40, 44, 63, .3)',
+      },
+    },
   },
   plugins: [],
 }

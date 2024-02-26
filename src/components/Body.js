@@ -24,13 +24,16 @@ const Body = () => {
     
     // console.log("Body component getting rendered");
     return (
-        <div className="body">
-            <div className="filter">
+        <div className="py-3 px-24">
+            <div className="flex my-3">
                 <div className="search-container">
-                    <input type="text" className="searchBox" value={ searchText } onChange={(e)=> {
+                    <input type="text" className="border border-solid search-box mr-2 py-[2px] px-[6px] w-60" value={ searchText } onChange={(e)=> {
                         setSearchText(e.target.value);
                     }}></input>
-                    <button className="search" onClick={()=> {
+                    <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold
+                    hover:text-white border border-blue-500 hover:border-transparent rounded 
+                      mr-4 ml-2 py-[2px] px-[6px]" 
+                      onClick={()=> {
                         const filteredList = restListData.filter((rest)=> {
                             return rest?.info?.name.toLowerCase().includes(searchText.toLowerCase());
                         });
@@ -38,7 +41,10 @@ const Body = () => {
                         setRestaurantList(filteredList);
                     }}>Search</button>
                 </div>
-                <button className="filter-btn" onClick={() => {
+                <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold
+                    hover:text-white border border-blue-500 hover:border-transparent rounded 
+                    py-[2px] px-[6px] ml-48" 
+                    onClick={() => {
                     const filteredRestList = restaurantList.filter((restaurant) => {
                        return restaurant.info.avgRating > 4.3;
                     });
@@ -47,7 +53,7 @@ const Body = () => {
                 }}>Top rated restaurants</button>
             </div>
             {/* {console.log("Rest list getting mapped")} */}
-            <div className="resContainer">
+            <div className="flex flex-wrap">
                 {
                     restaurantList.map( (restaurant) => (
                         <Link key = {restaurant.info.id} to = {"/restaurant/" + restaurant.info.id} style={{ textDecoration: 'none', color: 'inherit' }}>
