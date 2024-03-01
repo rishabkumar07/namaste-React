@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.res-card-container {
+  position: relative;
+
+  .discountLabel {
+      padding-left: 15px;
+      position: absolute;
+      top: 130px;
+      color: white;
+      font-size: 20px;
+      height: 30px;
+      width: 240px;
+      background: linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%);
+      text-transform: uppercase;
+  }
+}

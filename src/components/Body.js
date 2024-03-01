@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withFlatOffLabel } from "./RestaurantCard";
 import {useState} from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -8,7 +8,8 @@ import useBody from "../utils/useBody";
 const Body = () => {
     const [searchText, setSearchText] = useState('');
     const onlineStatus = useOnlineStatus();
-		const { restaurantList, restListData, setRestaurantList } = useBody();
+	const { restaurantList, restListData, setRestaurantList } = useBody();
+    const RestaurantCardBanner = withFlatOffLabel(RestaurantCard);
      
     //conditional rendering
 
@@ -57,7 +58,9 @@ const Body = () => {
                 {
                     restaurantList.map( (restaurant) => (
                         <Link key = {restaurant.info.id} to = {"/restaurant/" + restaurant.info.id} style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <RestaurantCard restListData = {restaurant}/>
+                            {
+                                restaurant.info?.aggregatedDiscountInfoV3?.header ? <RestaurantCardBanner restListData = {restaurant}/> :  <RestaurantCard restListData = {restaurant}/>
+                            }
                         </Link>
                     ))
                 }

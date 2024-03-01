@@ -26,4 +26,16 @@ const RestaurantCard = (props) => {
     );
 };
 
+export const withFlatOffLabel = (RestaurantCard) => {
+	return (props) => {
+		const { aggregatedDiscountInfoV3 } = props?.restListData?.info;
+		return (
+			<div className="res-card-container">
+				<label class="discountLabel">{ aggregatedDiscountInfoV3?.header } Above ...</label>
+				<RestaurantCard {...props}/>
+			</div>
+		)
+	}
+}
+
 export default RestaurantCard;
