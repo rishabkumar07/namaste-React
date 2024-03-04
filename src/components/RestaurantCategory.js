@@ -1,11 +1,10 @@
 import MenuItems from "./MenuItems";
 import { useState } from "react";
 
-const RestaurantCategory= ({data}) => {
-  const [showItems, setShowItems] = useState(false);
+const RestaurantCategory= ({data, showItems, setShowIndex}) => {
 
   const handleAccordion = () => {
-    setShowItems(!showItems);
+    setShowIndex();
   }
 
   return (
