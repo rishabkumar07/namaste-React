@@ -1,4 +1,4 @@
-import React, {lazy, Suspense} from "react";
+import React, {lazy, Suspense, useState, useEffect} from "react";
 import ReactDOM from "react-dom/client";
 import Header from './components/Header';
 import Body from './components/Body';
@@ -7,6 +7,7 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import UserContext from "./utils/UserContext";
 
 //Chunking, Code Splitting, Dynamic Bundling
 // Lazy Loading, On-demand-loading, Dynamic Import
@@ -15,12 +16,23 @@ const Grocery = lazy(()=> import("./components/Grocery"));
 const About = lazy(()=> import("./components/About"));
 
 const Applayout = () => {
-    return (
-        <div className ="foodApp" >
-            <Header />
-            <Outlet />
-        </div>
-    );
+	const [userInfo, setUserInfo] = useState("Superman");
+
+	useEffect(()=> {
+		//make an api call to get logged in user info
+		const data = { name : "Rishabh Raj" }
+		setUserInfo(data.name);
+	}, [])
+	
+	return (
+		<UserContext.Provider value={{loggedInUser: userInfo, setUserInfo}}>
+			<div className ="foodApp" >
+  			<Header />
+    		<Outlet />
+  		</div>
+		</UserContext.Provider>
+		
+  );
 }
 
 const appRouter = createBrowserRouter([

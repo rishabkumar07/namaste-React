@@ -1,11 +1,14 @@
 import LOGO_IMG from "../public/images/foodlogo.png"
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
     const [btnLabel, setBtnLabel] = useState("Login");
     const onlineStatus = useOnlineStatus();
+
+    const { loggedInUser } = useContext(UserContext);
 
     return (
         <div className = "flex justify-between items-center px-5 bg-yellow-50 shadow-lg sm:bg-pink-100 lg:bg-green-5" >
@@ -33,6 +36,7 @@ const Header = () => {
                     <button className="font-medium" onClick={()=> {
                         btnLabel === "Login" ? setBtnLabel("Logout") : setBtnLabel("Login");
                     }}>{ btnLabel }</button>
+                    <li className="ml-6 font-medium">{loggedInUser}</li>
                 </ul>
             </div>
         </div>  

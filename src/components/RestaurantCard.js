@@ -31,7 +31,7 @@ export const withFlatOffLabel = (RestaurantCard) => {
 		const { aggregatedDiscountInfoV3 } = props?.restListData?.info;
 		return (
 			<div className="res-card-container">
-				<label class="discountLabel">{ aggregatedDiscountInfoV3?.header } Above ...</label>
+				<label className="discountLabel">{ aggregatedDiscountInfoV3?.header } Above ...</label>
 				<RestaurantCard {...props}/>
 			</div>
 		)
