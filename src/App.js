@@ -8,6 +8,8 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 //Chunking, Code Splitting, Dynamic Bundling
 // Lazy Loading, On-demand-loading, Dynamic Import
@@ -25,12 +27,15 @@ const Applayout = () => {
 	}, [])
 	
 	return (
-		<UserContext.Provider value={{loggedInUser: userInfo, setUserInfo}}>
-			<div className ="foodApp" >
-  			<Header />
-    		<Outlet />
-  		</div>
-		</UserContext.Provider>
+		<Provider store={appStore}>
+			<UserContext.Provider value={{loggedInUser: userInfo, setUserInfo}}>
+				<div className ="foodApp" >
+  				<Header />
+    			<Outlet />
+  			</div>
+			</UserContext.Provider>
+		</Provider>
+		
 		
   );
 }

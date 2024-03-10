@@ -1,6 +1,10 @@
 import { CDN_LINK } from "../utils/constants";
 
 const MenuItems = ({items}) => {
+  const handleClick = () => {
+
+  };
+
   return (
     <div>
       {items.map((item)=> {
@@ -19,7 +23,7 @@ const MenuItems = ({items}) => {
             <div className="w-3/12 p-4 relative">
               <div>
                 <button className="p-0 mx-16 rounded-lg bg-black text-white shadow-lg
-                  absolute bottom-4 left-5 w-12 h-6 text-sm">
+                  absolute bottom-4 left-5 w-12 h-6 text-sm" onClick={handleClick}>
                   Add +
                 </button>
               </div>

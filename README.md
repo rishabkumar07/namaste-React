@@ -41,3 +41,12 @@ Learning React and doing some cool projects
 Two types of import & export -
 1) Default import/export
 2) Named import/export
+
+# Redux Toolkit (RTK) -
+
+- Install React-Redux & Redux Toolkit
+- Build our Store
+- Connect our store to app
+- Slice(Cart Slice)
+- Dispatch(Action)
+- Selector
