@@ -9,7 +9,8 @@ const useRestaurantMenu = (resId) => {
   }, []);
 
   const fetchData = async () => {
-    const url = CORS_LINK + encodeURIComponent(REST_MENU_LINK + resId);
+    //const url = CORS_LINK + encodeURIComponent(REST_MENU_LINK + resId);
+    const url = REST_MENU_LINK + resId;
     const data = await fetch(url);
     const json = await data.json();
     setRestInfo(json?.data);

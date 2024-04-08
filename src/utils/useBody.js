@@ -10,7 +10,8 @@ const useBody = () => {
   }, []);
 
   const fetchData = async () => {
-    const url = CORS_LINK + encodeURIComponent(REST_LINK);
+    //const url = CORS_LINK + encodeURIComponent(REST_LINK);
+    const url = REST_LINK;
     const data = await fetch(url);
     const jsonData = await data.json();
 

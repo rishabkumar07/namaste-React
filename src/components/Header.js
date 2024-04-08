@@ -36,7 +36,9 @@ const Header = () => {
                     <li className="mr-6 font-medium">
                         <Link to="/grocery">Grocery</Link>
                     </li>
-                    <li className="mr-6 font-medium">Cart ({cartItems.length} items)</li>
+                    <li className="mr-6 font-medium">
+                        <Link to="/cart">Cart ({cartItems.length} items)</Link>  
+                    </li>
                     <button className="font-medium" onClick={()=> {
                         btnLabel === "Login" ? setBtnLabel("Logout") : setBtnLabel("Login");
                     }}>{ btnLabel }</button>
