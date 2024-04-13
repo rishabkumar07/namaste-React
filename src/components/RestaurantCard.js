@@ -9,7 +9,7 @@ const RestaurantCard = (props) => {
     const {name, cuisines, avgRating, costForTwo, sla, cloudinaryImageId} = restListData?.info;
 
     return (
-        <div className="my-3 w-60 mr-6 rounded-lg bg-gray-100 hover:bg-gray-200">
+        <div data-testid="resCard" className="my-3 w-60 mr-6 rounded-lg bg-gray-100 hover:bg-gray-200">
             <div className="res-logo">
                 <img src={ CDN_LINK +  cloudinaryImageId } alt="res-logo"
                   className="w-60 h-40 object-cover" />

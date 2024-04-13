@@ -30,7 +30,7 @@ const Body = () => {
   	<div className="py-3 px-24">
       <div className="flex my-3">
         <div className="search-container">
-          <input type="text" className="border border-solid search-box mr-2 py-[2px] px-[6px] w-60" value={ searchText } onChange={(e)=> {
+          <input type="text"  data-testid="searchInput" className="border border-solid search-box mr-2 py-[2px] px-[6px] w-60" value={ searchText } onChange={(e)=> {
             setSearchText(e.target.value);
           }}></input>
           <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold
@@ -44,7 +44,7 @@ const Body = () => {
             	}}>Search
 					</button>
         </div>
-        <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold
+        <button data-testid="filterRestaurants" className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold
           hover:text-white border border-blue-500 hover:border-transparent rounded 
           py-[2px] px-[6px] ml-24" 
           onClick={() => {
